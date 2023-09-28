@@ -6,9 +6,9 @@ class Example {
         }
     }
 
-    static void f2(int N){
+    static void f2(){
         for(int i = 0; i < 100; i++){
-            System.out.println(i);
+            f1(i);
         }
     }
 
@@ -36,7 +36,6 @@ class Example {
     static void f6(int N){
         for(int i = 1; i < N; i++){
             for(int j = 1; j < N; j = j*2){ 
-                f4(N);
                 System.out.println(i);
             }
         }
