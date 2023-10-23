@@ -1,4 +1,4 @@
-package c7sorting.Sorting;
+package sorting.Sorting;
 
 public class Sorting {
     public static void bubbleSort(int []A, int N) {
@@ -42,15 +42,14 @@ public class Sorting {
         }
     }
 
-    static void mergeSort(int[] arr, int lo, int hi) { // lg(N)
-        if(lo >= hi) { //1
-            //System.out.println(arr[(lo + hi) / 2]);
-            return; // 1
+    static void mergeSort(int[] arr, int lo, int hi) { 
+        if(lo >= hi) { 
+            return; 
         }
         int q = (lo + hi)/2;
         mergeSort(arr, lo, q); 
         mergeSort(arr, q + 1, hi);
-        merge(arr, lo, (lo + hi) / 2, hi); // N
+        merge(arr, lo, (lo + hi) / 2, hi); 
     }
 
     // O(N)
@@ -96,8 +95,28 @@ public class Sorting {
         }
       }
 
-    static void quickSort(int []A, int N) {
+    static void quickSort(int []A, int p, int r) {
+      if(p >= r) return;
+      int q = partitioning(A, p, r);
+      quickSort(A, p, q - 1);
+      quickSort(A, q + 1, r);
+    }
 
+    static int partitioning(int []A, int p, int r) {
+      int q = r;
+      for(int u = p; u < r; u++){
+        if(A[q] >= A[u]){
+          int temp = A[u];
+          A[u] = A[p];
+          A[p] = temp;
+          p++;
+        }
+      }
+
+      int temp = A[q];
+      A[q] = A[p];
+      A[p] = temp;
+      return p;
     }
 
     static void heapSort(int []A, int N) {
