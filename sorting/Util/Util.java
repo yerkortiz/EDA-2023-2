@@ -1,4 +1,4 @@
-package c7sorting.Util;
+package sorting.Util;
 
 public class Util {
     public static int[] generateRandomArray(int N) {

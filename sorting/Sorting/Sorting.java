@@ -42,7 +42,7 @@ public class Sorting {
         }
     }
 
-    static void mergeSort(int[] arr, int lo, int hi) { 
+    public static void mergeSort(int[] arr, int lo, int hi) { 
         if(lo >= hi) { 
             return; 
         }
@@ -95,7 +95,7 @@ public class Sorting {
         }
       }
 
-    static void quickSort(int []A, int p, int r) {
+    public static void quickSort(int []A, int p, int r) {
       if(p >= r) return;
       int q = partitioning(A, p, r);
       quickSort(A, p, q - 1);

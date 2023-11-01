@@ -1,6 +1,6 @@
-import java.util.LinkedList;
+package Queue;
+public class Queue {
 
-public class Cola {
     LinkedListNode head;
     LinkedListNode tail;
 
@@ -54,7 +54,7 @@ public class Cola {
         }
     }
     public static void main(String[] args) {
-        Cola c = new Cola();
+        Queue c = new Queue();
         c.enqueue(1);   
         c.enqueue(10);   
         c.enqueue(15);   

@@ -1,3 +1,4 @@
+package Search;
 import java.util.Arrays;
 class Search {
     static boolean linearSearch(int[] arr, int target) {

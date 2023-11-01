@@ -1,19 +1,18 @@
-package c7sorting;
-
-import c7sorting.Util.Util;
+package sorting;
 
 import java.util.Arrays;
 
-import c7sorting.Sorting.Sorting;
+import sorting.Sorting.Sorting;
+import sorting.Util.Util;
 
 public class Main {
     public static void main(String[] args) {
         
 
-        int[] A = Util.generateRandomArray(100000);
+        int[] A = Util.generateRandomArray(10);
         Util.printArray(A);
         long startTimeBS = System.nanoTime();
-        Sorting.insertionSort(A, A.length);
+        Sorting.quickSort(A, 0, A.length);
         // long memory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         // Arrays.sort(A);
         long endTimeBS = System.nanoTime();

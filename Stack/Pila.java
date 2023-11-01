@@ -1,4 +1,4 @@
-package class6;
+package Stack;
 
 public class Pila {
     LinkedListNode top;
