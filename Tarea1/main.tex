@@ -1,0 +1,198 @@
+\documentclass[12pt]{exam}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+\usepackage[document]{ragged2e}
+\usepackage[margin=0.5in]{geometry}
+
+\newcommand{\homeworkTitle}[1]{
+    \centering{\textbf{Tarea 1}}
+    \newline
+    \centering{\textbf{Estructuras de Datos y Algoritmos}}
+    \newline
+    \centering{\textbf{#1}}
+    %\newline
+    %\centering{\textbf{Profesor Yerko Ortiz}}
+    \noindent\rule{\textwidth}{1pt}
+}
+
+\newcommand{\problemStatement}[1]{
+    \centering{\underline{#1}}
+    \vspace{0.5cm}
+}
+
+\fboxsep=1pt
+
+\begin{document}
+
+\homeworkTitle{Búsqueda y Ordenamiento}
+
+\noindent
+1. 
+\problemStatement{Distribución de cacahuates}
+
+\begin{flushleft}
+El último trabajo de Don Ramón fue de vendedor de confites, donde para su dicha vendió casi todo. 
+Puesto que ya se aburrió de trabajar y le sobraron unas cuantas bolsas de maní, se le ocurrió la idea
+de repartirlas entre los niños de la vecindad.
+
+Cada bolsa tiene una cantidad variable de cacahuates escrita en el reverso de cada una. Don Ramón al saber que los niños son un poco conflictivos decidió que la mejor forma de repartir las bolsas es alguna que minimice la diferencia entre la cantidad de cacahuates de la bolsa más grande y la más pequeña. 
+Puesto que no se quiere complicar la vida con calculos extravagantes decidió que solo regalará una bolsa por persona para así guardar las demás bolsas para otra ocasión.
+
+Cabe considerar que la cantidad de niños que irán a pedirle maní es variable, sin embargo para que el algoritmo que diseñó
+Don Ramón funcione basta con minimizar la diferencia entre la bolsa más grande y la más pequeña.
+
+
+\textbf{Formato de Entrada}
+\begin{enumerate}
+\item Número entero K que denota la cantidad de niños que recibirán bolsas con cacahuates.
+\item Número entero N que denota la cantidad de bolsas de cacahuates.
+\item Una secuencia de enteros $a_1, a_2, \dots, a_N$ que denotan la cantidad de cacahuates en cada bolsa.
+\end{enumerate}
+
+
+\textbf{Formato de Salida}
+\begin{enumerate}
+    \item Número entero d que denota la diferencia entre la bolsa más grande y la más pequeña.
+\end{enumerate}
+
+\textbf{Ejemplos}
+
+\end{flushleft}
+
+\noindent\fbox{%
+\begin{minipage}[t]{0.48\linewidth}
+\underline{Ejemplo 1}
+\\
+\textbf{Entrada}
+\\
+3
+\\
+5
+\\
+7 3 2 1 9
+\\
+\textbf{Salida}
+\\
+2
+\end{minipage}}%
+\hfill%
+\fbox{%
+\begin{minipage}[t]{0.48\linewidth}
+\underline{Ejemplo 2}
+\\
+\textbf{Entrada}
+\\
+4
+\\
+5
+\\
+7 3 2 1 9
+\\
+\textbf{Salida}
+\\
+6
+\end{minipage}
+}
+
+\begin{flushleft}
+\vspace{0.25cm}
+\textbf{Explicación}
+\begin{enumerate}
+    \item En el ejemplo 1 las bolsas a repartir son las bolsas 1, 2, 3 puesto que la diferencia entre la bolsa más grande y la más pequeña es 2.
+    \item En el ejemplo 2 las bolsas a repartir son las bolsas 1, 2, 3, 7 puesto que la diferencia entre la bolsa más grande y la más pequeña es 6.
+\end{enumerate}
+\textbf{Restricciones}
+\newline 
+Su algoritmo debe tener una complejidad de $O(N \log N)$.
+\end{flushleft}
+
+\newpage 
+
+\problemStatement{Canciones Repetidas}
+
+\begin{flushleft}
+La empresa Zpotify descubrió que muchas de las canciones en su plataforma están repetidas, por lo que ahora buscan crear un algoritmo 
+capaz de buscar una canción en una lista de canciones y retornar la cantidad de repeticiones de esta. 
+\newline
+Diseñe un algoritmo que sea capaz de buscar una canción en un documento de canciones y retornar la cantidad de repeticiones de esta. 
+Para simplificar el problema las canciones serán representadas con números enteros y los documentos mediante un arreglo; en el cual, 
+las canciones vienen \textit{ordenadas} de menor a mayor.
+
+\textbf{Formato de Entrada}
+\begin{enumerate}
+\item Número entero N que denota la cantidad de canciones.
+\item Una secuencia de enteros $a_1, a_2, \dots, a_N$ que denotan las canciones.
+\item Número entero c que denota la canción a buscar en el documento.
+\end{enumerate}
+
+
+\textbf{Formato de Salida}
+\begin{enumerate}
+    \item Número entero r que denota la cantidad de repeticiones de c en el documento.
+\end{enumerate}
+
+\textbf{Ejemplos}
+\end{flushleft}
+
+\noindent\fbox{%
+\begin{minipage}[t]{0.48\linewidth}
+\underline{Ejemplo 1}
+\\
+\textbf{Entrada}
+\\
+5
+\\
+1 3 6 6 7
+\\
+6
+\\
+\textbf{Salida}
+\\
+2
+\end{minipage}}%
+\hfill%
+\fbox{%
+\begin{minipage}[t]{0.48\linewidth}
+\underline{Ejemplo 2}
+\\
+\textbf{Entrada}
+\\
+10
+\\
+1 1 1 1 5 5 5 8 9 9
+\\
+3
+\\
+\textbf{Salida}
+\\
+0
+\end{minipage}
+}
+
+\begin{flushleft}
+\vspace{0.25cm}
+\textbf{Explicación}
+\begin{enumerate}
+    \item En el ejemplo 1 la salida es 2 puesto que el número 6 está repetido dos veces en el documento.
+    \item En el ejemplo 2 la salida es 0 puesto que el número 3 no está presente en el documento.
+\end{enumerate}
+\textbf{Restricciones}
+\newline 
+El algoritmo puede tener peor caso $\mathcal{O}(N)$. Pero debe tener mejor caso $\Omega(lg N)$.
+\end{flushleft}
+
+\newpage
+
+\underline{Reglas para la entrega}
+
+\begin{enumerate}
+    \item Cada problema tiene un puntaje de 3 puntos de un total de 6.
+    \item La entrega consiste en un código fuente en Java por cada problema. Si el código no compila se le descontará 2 puntos del problema en cuestión.
+    \item Si cree necesario puede adjuntar un archivo en pdf con una explicación de su algoritmo. Esto es opcional.
+    \item Si el alumno no pone su nombre en el código fuente de cada problema se le descontará 1 punto del total.
+    \item Cualquier evidencia clara de copia o plagio se sancionará con la nota mínima.
+    \item Fecha de entrega: 12/11/2023.
+\end{enumerate}
+
+\end{document}
