@@ -1,4 +1,4 @@
-package sorting.Sorting;
+package c9.Sorting;
 
 public class Sorting {
     public static void bubbleSort(int []A, int N) {
@@ -123,7 +123,32 @@ public class Sorting {
 
     }
 
-    static void countingSort(int []A, int N) {
+    public static void countingSort(int []A, int N) {
+      int min = A[0];
+      int max = A[0];
 
+      for (int i = 0; i < N; i++){
+        if(min > A[i]){
+          min = A[i];
+        }
+        if(max < A[i]){
+          max = A[i];
+        }
+      }
+
+      int tableSize = max - min + 1;
+      int []countTable = new int[tableSize];
+      for(int i = 0; i < N; i++){
+        countTable[A[i] - min]++;
+      }
+
+      int j = 0;
+      for(int i = 0; i < tableSize; i++){
+        while(countTable[i] > 0){
+          A[j] = i + min;
+          j++;
+          countTable[i]--;
+        }
+      }
     }
 }
