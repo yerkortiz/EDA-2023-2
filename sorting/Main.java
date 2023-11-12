@@ -2,8 +2,8 @@ package sorting;
 
 import java.util.Arrays;
 
-import sorting.Sorting.Sorting;
-import sorting.util.Util;Sorting;
+import sorting.sorting.Sorting;
+import sorting.util.Util;
 
 public class Main {
     public static void main(String[] args) {
