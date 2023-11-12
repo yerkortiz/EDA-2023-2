@@ -1,6 +1,6 @@
 package binarySearchTree;
 
-import binarySearchTree.binarySearchTree.BinarySearchTree;
+import binarySearchTree.bst.BinarySearchTree;
 
 public class Main {
     public static void main(String[] args) {
