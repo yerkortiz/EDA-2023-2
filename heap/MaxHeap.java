@@ -74,7 +74,7 @@ public class MaxHeap {
 
     private void increaseKey(int i) {
         int temp = heap[i];
-        while(i>1 && temp > heap[parent(i)]){
+        while(i > 1 && temp > heap[parent(i)]){
             heap[i] = heap[parent(i)];
             i = parent(i);
         }

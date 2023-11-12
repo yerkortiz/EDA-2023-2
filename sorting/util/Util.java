@@ -1,4 +1,4 @@
-package c9.Util;
+package sorting.util;
 
 public class Util {
     public static int[] generateRandomArray(int N) {

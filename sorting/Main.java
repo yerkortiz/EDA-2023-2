@@ -1,9 +1,9 @@
-package c9;
+package sorting;
 
 import java.util.Arrays;
 
-import c9.Sorting.Sorting;
-import c9.Util.Util;
+import sorting.Sorting.Sorting;
+import sorting.util.Util;Sorting;
 
 public class Main {
     public static void main(String[] args) {

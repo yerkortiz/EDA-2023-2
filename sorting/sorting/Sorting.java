@@ -1,4 +1,4 @@
-package c9.Sorting;
+package sorting.sorting;
 
 public class Sorting {
     public static void bubbleSort(int []A, int N) {
