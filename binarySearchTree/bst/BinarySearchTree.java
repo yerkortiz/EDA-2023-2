@@ -2,7 +2,7 @@ package binarySearchTree.bst;
 
 public class BinarySearchTree {
     public class BinarySearchTreeNode {
-        int key;
+        public int key;
         BinarySearchTreeNode left;
         BinarySearchTreeNode right;
 
@@ -11,15 +11,15 @@ public class BinarySearchTree {
         }
     }
 
+    public BinarySearchTreeNode root;
     public BinarySearchTree() {
         root = null;
     }
-    public BinarySearchTreeNode root;
+    
 
     public  BinarySearchTreeNode Insert(BinarySearchTreeNode x, int key) {
         if (x == null) {
             x = new BinarySearchTreeNode(key);
-            x.key = key;
             return x;
         }
 
